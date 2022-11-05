@@ -1,0 +1,28 @@
+.couleur{
+    background-color: #74b9ff;
+}
+
+.couleurContainer{
+    border-radius: 5px;
+    background-color:#55efc4;
+    padding: 10px;
+}
+
+.rouge{
+    background-color: #F00;
+}
+
+.vert{
+    background-color: #0F0;
+}
+.coin{
+    border:1px solid black;
+    border-radius: 10px;
+}
+
+.formatFlex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}

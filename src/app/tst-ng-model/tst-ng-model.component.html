@@ -1,0 +1,31 @@
+<p>tst-ng-model works!</p>
+
+<div class=" container couleurContainer">
+    <!-- ici, cet input n'est pas dynamique à cause de la syntaxe [] -->
+    <input type="text" [ngModel]="inputContent"><span class="couleur">{{inputContent}}</span>
+    <br />
+    <!-- ici, cet input est dynamique bidirectionnelle grâce à la syntaxe [()] -->
+    <input type="text" [(ngModel)]="inputContent"><span class="couleur">{{inputContent}}</span>
+    <br /><br />
+    <input type="text" [(ngModel)]="inputContentBis"><span class="couleur">{{inputContentBis}}</span>
+    <br /><br />
+    <button class="btn btn-dark" (click)="handleClick()">LECTURE DES VALEURS</button>
+    <br /><br />
+
+    <h4>1. Test de la directive ngClass avec une expression:</h4>
+    <div class="formatFlex" [ngClass]="NGCLASS?'vert':'rouge' ">
+        <span>Test de la directive ngClass via une expression</span>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" checked (change)="onChangeNgClass()">
+            <span>Click Here !</span>
+        </div>
+    </div>
+    <br />
+    <h4>2. Test de la directive ngClass avec une méthode:</h4>
+    <div class="formatFlex" [ngClass]="mesParams">
+        <span>Test de la directive ngClass avec une méthode</span>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" checked (change)="onChangeNgClassWithMethod()">
+            <span>Click Here !</span>
+        </div>
+    </div>
